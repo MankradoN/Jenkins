@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               sudo sh "./build.sh"
+                sh "sudo ./build.sh"
             }
         }
         stage('Test') {
             steps {
-              sudo sh "./test.sh"
+               sh "sudo ./test.sh"
             }
         }
         stage('Deploy') {
             steps {
-               sudo sh "./deploy.sh"
+                sh "sudo ./deploy.sh"
             }
         }
     }
