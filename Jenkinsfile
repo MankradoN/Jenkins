@@ -4,17 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "sudo ./build.sh"
+                sh "chmod +x build.sh"
+                sh "./build.sh"
             }
         }
         stage('Test') {
             steps {
-               sh "sudo ./test.sh"
+               sh "chmod +x test.sh"
+               sh "./test.sh"
             }
         }
         stage('Deploy') {
             steps {
-                sh "sudo ./deploy.sh"
+                sh "chmod +x deploy.sh"
+                sh "./deploy.sh"
             }
         }
     }
